@@ -65,6 +65,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: clinic-service
+          service: clinic-new-service
           cluster: cluster-clinic-ec2
           wait-for-service-stability: true
