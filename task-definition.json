@@ -1,0 +1,74 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:458068165187:task-definition/clinic-new-task:1",
+  "containerDefinitions": [
+    {
+      "name": "clinic-container",
+      "image": "458068165187.dkr.ecr.us-east-1.amazonaws.com/clinic:develop",
+      "cpu": 0,
+      "memory": 1000,
+      "memoryReservation": 500,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/clinic-new-task",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "family": "clinic-new-task",
+  "taskRoleArn": "arn:aws:iam::458068165187:role/AWSECSTaskExecutionNewRole",
+  "executionRoleArn": "arn:aws:iam::458068165187:role/AWSECSTaskExecutionNewRole",
+  "networkMode": "bridge",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+    "EXTERNAL",
+    "EC2"
+  ],
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+  "registeredAt": "2023-03-08T13:26:33.015Z",
+  "registeredBy": "arn:aws:iam::458068165187:root",
+  "tags": []
+}
