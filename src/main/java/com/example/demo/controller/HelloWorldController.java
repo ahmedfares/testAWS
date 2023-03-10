@@ -8,6 +8,6 @@ public class HelloWorldController
     @RequestMapping("/")
     public String hello()
     {
-        return "Hello AWS";
+        return "Hello AWS with load balancer";
     }
 }
