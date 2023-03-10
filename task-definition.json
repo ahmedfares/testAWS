@@ -9,7 +9,7 @@
       "entryPoint": [],
       "portMappings": [
         {
-          "hostPort": 0,
+          "hostPort": 80,
           "protocol": "tcp",
           "containerPort": 8080
         }
@@ -29,7 +29,7 @@
       "memoryReservation": 500,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "458068165187.dkr.ecr.us-east-1.amazonaws.com/clinic:develop",
+      "image": "458068165187.dkr.ecr.us-east-1.amazonaws.com/clinic",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -56,7 +56,7 @@
     "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:458068165187:task-definition/clinic-new-task:5",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:458068165187:task-definition/clinic-new-task:7",
   "family": "clinic-new-task",
   "requiresAttributes": [
     {
@@ -91,7 +91,7 @@
   "networkMode": "bridge",
   "runtimePlatform": null,
   "cpu": null,
-  "revision": 5,
+  "revision": 7,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
